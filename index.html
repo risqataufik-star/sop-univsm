@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi SOP UnivSM</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+  <script type="module" crossorigin src="./assets/index-BUXojiBS.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Ck9MBa9D.css">
+</head>
+<body>
+    <div id="app" class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>SOP UnivSM</h1>
+                </div>
+                <p class="subtitle">Sistem Manajemen Dokumen</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>Kategori SOP</h3>
+                    <ul id="nav-upm">
+                        <!-- Nav items injected via JS -->
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2024 Universitas Sapta Mandiri</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-titles">
+                    <h2 id="current-category-title">Semua SOP</h2>
+                    <p id="current-category-count" class="item-count">0 Dokumen</p>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="search-input" placeholder="Cari SOP berdasarkan nama atau nomor..." autocomplete="off">
+                        <button id="clear-search" class="clear-btn hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Loading State -->
+                <div id="loading-state" class="empty-state">
+                    <div class="loader"></div>
+                    <h3>Mengambil Data...</h3>
+                    <p>Sinkronisasi langsung dari Google Sheets.</p>
+                </div>
+
+                <!-- Data View (Grid/Table) -->
+                <div class="sop-list hidden" id="sop-list-container">
+                    <!-- Cards will be injected here via JS -->
+                </div>
+                
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-state hidden">
+                    <div class="empty-icon">🔍</div>
+                    <h3>Tidak ditemukan</h3>
+                    <p>Maaf, kami tidak menemukan SOP yang sesuai dengan kriteria pencarian Anda.</p>
+                    <button id="reset-search-btn" class="btn btn-primary">Reset Pencarian</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+</body>
+</html>
