@@ -1,0 +1,22 @@
+{
+  "name": "sop-univsm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "parse": "node scripts/parse-html.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "gh-pages": "^6.3.0",
+    "vite": "^8.0.13"
+  }
+}
